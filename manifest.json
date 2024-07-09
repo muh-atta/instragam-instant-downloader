@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Instagram Image Downloader by Atta",
+    "version": "1.0",
+    "description": "Adds a download button under every image on Instagram.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.instagram.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
